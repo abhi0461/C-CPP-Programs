@@ -1,0 +1,21 @@
+Marvellous Logic Building Assignment : 48
+Logic Building Assignment : 48
+1. Write application which accept file name from user and open that file in read mode.
+Input : Demo.txt
+Output : File opened successfully.
+2. Write application which accept file name from user and create that file.
+Input : Demo.txt
+Output : File created successfully.
+3. Write application which accept file name from user and read all data from that file
+and display contents on screen.
+Input : Demo.txt
+Output : Display all data of file.
+4. Write application which accept file name from user and display size of file.
+Input : Demo.txt
+Output : File size is 56 bytes
+5. Write application which accept file name from user and one string from user. Write
+that string at the end of file.
+Input : Demo.txt
+ Hello World
+Output : Write Hello World at the end of Demo.txt file
+Piyush Khairnar : 7588945488 आ"ी Technical सं&ार करतो !!! ©Marvellous Infosystems Page 1

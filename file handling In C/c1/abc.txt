@@ -1,0 +1,76 @@
+/*                                              File handling in C                       
+
+Accept two file names from user and copy contents of one file into another file
+
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<fcntl.h>
+#include<string.h>
+/*                                              File handling in C                       
+
+Accept two file names from user and copy contents of one file into another file
+
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<fcntl.h>
+#include<string.h>
+
+// Function is Used to open and read whole data of the file.
+
+void FileCopy(char *src,char *dest)
+{
+    int fdscr,fddest = 0;
+    char mug[100] = {'\0'};
+    int ret = 0;
+
+    fdscr = open(FName,O_RDONLY);
+    
+    if (fdscr == -1)
+    {
+        printf("Unable to open the source file\n");
+        return;
+    }
+
+    fddest = open(dest,O_RDWR | O_CREAT,0777);
+
+    if(fddest == -1)
+    {
+        printf("Unable to open the destination file\n");
+        close(fdscr);
+        return;
+    }
+
+    while((ret = read(fdsrc,mug,sizeof(mug))) != 0)
+    {
+        write(fddest,mug,ret);
+    }
+
+    printf("Data from the file is : \n");
+    while((ret = read(fd,arr,100)) != 0)
+    {
+        write(1,arr,ret);
+    }
+    close(fd);
+}
+
+int main()
+{
+    char name1[50] = {'\0'};
+    char name2[50] = {'\0'};
+    
+    printf("Enter source file name\n");
+    scanf("%s",name1);
+
+    printf("Enter destination file name\n");
+    scanf("%s",name2);
+
+    FileCopy(name1,name2);
+    
+    return 0;
+}
